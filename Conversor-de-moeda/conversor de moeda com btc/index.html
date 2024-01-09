@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conversor de Moedas</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <div class="conversionBox" id="fiatConversion">
+            <h1>Conversor De Moedas</h1>
+
+            <label for="amountfiat">Digite o valor em BRL:</label>
+            <input type="number" id="amountfiat" placeholder="Digite o valor em BRL">
+            
+            <label for="currencyfiat">Escolha a moeda de destino:</label>
+            <select id="currencyfiat">
+                <option value="CZK">Coroa tcheca</option>
+                <option value="AED">Dirham </option>
+                <option value="AUD">Dólar australiano</option>
+                <option value="USD">Dólar americano</option>
+                <option value="EUR">Euro</option>
+                <option value="JPY">Iene Japonês</option>
+                <option value="GBP">Libra Esterlina</option>
+                <option value="RUB">Rublo russo</option>
+                <option value="PLN">Zloty polonês</option>
+                
+            </select>
+            
+            <button  onclick="convertCurrency('fiat')">Converter</button>
+            
+
+            <p class="result" id="resultFiat"></p>
+        </div>
+
+        <div class="conversionBox" id="cryptoConversion">
+            <h1>Criptomoeda</h1>
+
+            <label for="amountcrypto">Digite o valor em USD:</label>
+            <input type="number" id="amountcrypto" placeholder="Digite o valor em USD">
+            
+            <label for="crypto">Escolha a criptomoeda de destino:</label>
+            <select id="crypto">
+                <option value="BTC">Bitcoin (BTC)</option>
+                <option value="ETH">Ethereum (ETH)</option>
+                <option value="LTC">Litecoin (LTC)</option>
+                
+            </select>
+            
+            <button onclick="convertCurrency('crypto')">Converter</button>
+
+            <p class="result" id="resultcrypto"></p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
